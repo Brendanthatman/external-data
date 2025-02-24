@@ -2,6 +2,21 @@
 layout: layout.liquid
 title: 11ty Boilerplate
 ---
-<div x-data="{title1: $fetchjson('https://dummyjson.com/products/6', jsonItem='title')}">
-    <p x-text="title1"></p>
+<div x-data="{image: $fetchjson('https://dummyjson.com/products/6', jsonItem = 'thumbnail'), title: $fetchjson('https://dummyjson.com/products/6', jsonItem = 'title'), description: $fetchjson('https://dummyjson.com/products/6', jsonItem = 'description'), price: $fetchjson('https://dummyjson.com/products/6', jsonItem = 'price'), image2: $fetchjson('https://dummyjson.com/products/53', jsonItem = 'thumbnail'), title2: $fetchjson('https://dummyjson.com/products/53', jsonItem = 'title'), description2: $fetchjson('https://dummyjson.com/products/53', jsonItem = 'description'), price2: $fetchjson('https://dummyjson.com/products/53', jsonItem = 'price')}">
+    <h2 x-text="title"></h2>
+    <img x-bind:src="image" alt="Product Image" />
+    <img x-bind:src="image2" alt="Product Image" />
+    <p x-text="description"></p>
+    <p x-text="price"></p>
+    <template x-if="!data1">
+      <p>Loading...</p>
+    </template>
+  
+    <h2 x-text="title2"></h2>
+    <img x-bind:src="image2" alt="Product Image" />
+    <p x-text="description2"></p>
+    <p x-text="price2"></p>
+    <template x-if="!data2">
+      <p>Loading...</p>
+    </template>
 </div>
