@@ -2,3 +2,6 @@
 layout: layout.liquid
 title: 11ty Boilerplate
 ---
+<div x-data="{title1: $fetchjson('https://dummyjson.com/products/6', jsonItem='title')}">
+    <p x-text="title1"></p>
+</div>
