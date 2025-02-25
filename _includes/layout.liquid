@@ -1,5 +1,5 @@
 ---
-title: 11ty Boilerplate
+title: Shopping Layout
 ---
 
 <!DOCTYPE html>
@@ -11,13 +11,17 @@ title: 11ty Boilerplate
   <link rel="stylesheet" href="/styles/screen.css">
   <script defer src="https://cdn.jsdelivr.net/gh/hankhank10/alpine-fetch@main/alpine-fetch.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-  <nav>
-    <ul>
-      <li><a href="/" title="Go home">Home</a></li>
-      <li><a href="/about/" title="About the boilerplate">About</a></li>
-    </ul>
+<body class="bg-gray-100">
+  <nav class="bg-white shadow-md">
+    <div class="container mx-auto px-4 py-2 flex justify-between items-center">
+      <a href="/" class="text-xl font-bold text-gray-800">External Data Shopping, Inc</a>
+      <ul class="flex space-x-4">
+        <li><a href="/" class="text-gray-600 hover:text-gray-800 transition-colors duration-300" title="Go home">Home</a></li>
+        <li><a href="/about/" class="text-gray-600 hover:text-gray-800 transition-colors duration-300" title="About the boilerplate">About</a></li>
+      </ul>
+    </div>
   </nav>
     {{ content }}
 </body>
