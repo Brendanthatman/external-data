@@ -9,7 +9,7 @@ title: External Data Shopping, Inc
       <h2 class="text-2xl font-bold mb-4 text-gray-800" x-text="title"></h2>
       <img class="w-full h-64 object-cover mb-4 rounded-lg" x-bind:src="image" alt="Product Image" />
       <p class="text-gray-700 mb-4" x-text="description"></p>
-      <p class="text-xl font-semibold text-green-600 mb-4" x-text="`$${price}`"></p>
+      <p class="text-xl font-semibold text-green-600 mb-4" x-text="price"></p>
       <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors duration-300">Add to Cart</button>
       <template x-if="!data1">
         <p class="text-gray-500 mt-4">Loading...</p>
@@ -21,7 +21,7 @@ title: External Data Shopping, Inc
       <h2 class="text-2xl font-bold mb-4 text-gray-800" x-text="title2"></h2>
       <img class="w-full h-64 object-cover mb-4 rounded-lg" x-bind:src="image2" alt="Product Image" />
       <p class="text-gray-700 mb-4" x-text="description2"></p>
-      <p class="text-xl font-semibold text-green-600 mb-4" x-text="`$${price2}`"></p>
+      <p class="text-xl font-semibold text-green-600 mb-4" x-text="price2"></p>
       <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors duration-300">Add to Cart</button>
       <template x-if="!data2">
         <p class="text-gray-500 mt-4">Loading...</p>
